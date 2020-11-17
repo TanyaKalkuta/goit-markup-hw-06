@@ -702,7 +702,9 @@ img {
   display: inline-flex;
   align-items: baseline;
 }
-
+.contact-footer {
+  width: 231px;
+}
 .footer-social {
   width: 206px;
   height: 80px;
@@ -735,6 +737,63 @@ img {
 .social-icons-linkfooter:focus {
   background-color: var(--accent-cl);
 }
+
+.footer-mail {
+  width: 570px;
+  height: 86px;
+  margin-left: 93px;
+}
+.footer-mail .details-title {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.email-footer {
+  display: flex;
+  align-items: center;
+}
+.form-footer {
+  display: flex;
+}
+.form-footer input {
+  width: 358px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  background-color: var(--hero-cl);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+}
+.btn-email {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--white-cl);
+  background-color: var(--accent-cl);
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 29px;
+  margin-left: 12px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition-timing-function: var(--timing-function);
+  transition-property: color, background-color;
+  transition-duration: var(--time);
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -761,6 +820,7 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
 }
 .btn-close {
   position: absolute;
@@ -775,4 +835,87 @@ img {
   background-image: url(../images/icons/close.svg);
   background-repeat: no-repeat;
   background-position: center;
+}
+.btn-close:hover {
+  fill: #2196f3;
+} /*пока не работает*/
+
+.form {
+  width: 448px;
+}
+.textarea {
+  resize: none;
+}
+.form-title {
+  display: inline-block;
+  font-family: inherit;
+  font-style: 400;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-cl);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.form-field label {
+  font-weight: 400;
+  font-size: 1.167;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--main-text-cl);
+  margin-bottom: 4px;
+}
+.form-field input,
+.form-field textarea {
+  /*height: 40px;*/
+  padding: 11px 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.form-field input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.comment {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  color: rgba(117, 117, 117, 0.5);
+}
+.linkaccept {
+  color: var(--accent-cl);
+}
+
+.btn-accept {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--white-cl);
+  background-color: var(--accent-cl);
+  display: inline-block;
+  padding: 10px 32px;
+  margin-left: 124px;
+  margin-right: 124px;
+  margin-top: 30px;
+  min-width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition-timing-function: var(--timing-function);
+  transition-property: color, background-color;
+  transition-duration: var(--time);
 }
