@@ -920,8 +920,7 @@ img {
 .form-field {
   position: relative;
 }
-.form-input:focus,
-.form-input:hover {
+.form-input:focus {
   border-color: var(--accent-cl);
 }
 .form-icon {
