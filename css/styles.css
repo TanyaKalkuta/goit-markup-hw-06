@@ -748,12 +748,14 @@ img {
   margin-top: 0;
   margin-bottom: 20px;
 }
+
 .email-footer {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
 }
 .form-footer {
   display: flex;
+  /*align-items: center;*/
 }
 .form-footer input {
   width: 358px;
@@ -763,7 +765,7 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   color: rgba(255, 255, 255, 0.6);
-  background-color: var(--hero-cl);
+  background-color: transparent;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
@@ -794,6 +796,22 @@ img {
   transition-duration: var(--time);
 }
 
+.btn-email:hover,
+.btn-email:focus {
+  color: var(--accent-cl);
+  background-color: var(--white-cl);
+}
+.btn-icon {
+  margin-left: 10px;
+  fill: var(--white-cl);
+  transition-timing-function: var(--timing-function);
+  transition-property: fill;
+  transition-duration: var(--time);
+}
+.btn-email:hover .btn-icon,
+.btn-email:focus .btn-icon {
+  fill: var(--accent-cl);
+}
 .backdrop {
   position: fixed;
   top: 0;
@@ -825,20 +843,31 @@ img {
 .btn-close {
   position: absolute;
   display: block;
-  top: 8px;
+  top: 12px;
   right: 8px;
   width: 30px;
   height: 30px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background-image: url(../images/icons/close.svg);
+  cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
+  transition-timing-function: var(--timing-function);
+  transition: fill;
+  transition-duration: var(--time);
+  /*background-image: url(../images/icons/close.svg);*/
 }
-.btn-close:hover {
-  fill: #2196f3;
-} /*пока не работает*/
+.btn-close-c {
+  width: 11px;
+  height: 11px;
+  background-position: center;
+  background-size: contain;
+}
+.btn-close:hover,
+.btn-close:focus {
+  fill: var(--accent-cl);
+}
 
 .form {
   width: 448px;
@@ -874,25 +903,95 @@ img {
   color: var(--main-text-cl);
   margin-bottom: 4px;
 }
+.form-field input {
+  height: 40px;
+  padding-left: 42px;
+}
 .form-field input,
 .form-field textarea {
-  /*height: 40px;*/
-  padding: 11px 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
+  transition-timing-function: var(--timing-function);
+  transition: border-color;
+  transition-duration: var(--time);
 }
-.form-field input::placeholder {
-  color: rgba(117, 117, 117, 0.5);
+.form-field {
+  position: relative;
 }
+.form-input:focus,
+.form-input:hover {
+  border-color: var(--accent-cl);
+}
+.form-icon {
+  width: 18px;
+  height: 18px;
+  top: 51%;
+  left: 12px;
+  position: absolute;
+}
+.form-input:focus + .form-icon {
+  fill: var(--accent-cl);
+}
+
 .comment {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
-  color: rgba(117, 117, 117, 0.5);
+  /* color: rgba(117, 117, 117, 0.5);*/
 }
+.check-label {
+  position: relative;
+  display: flex;
+  width: 423px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 13px;
+  margin-right: 10px;
+  margin-top: 20px;
+  padding-left: 23px;
+  /*
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7124px;
+  letter-spacing: 0.03em;
+  color: #757575;
+*/
+}
+
+.check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: absolute;
+}
+
+.check-icon {
+  display: block;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 15%;
+  left: 0px;
+  border-radius: 2px;
+  border: 3px solid var(--title-cl);
+}
+.check-input:checked + .check-icon {
+  background-color: var(--accent-cl);
+  background-image: url(../images/icons/iconcheck1.svg);
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-cl);
+}
+
 .linkaccept {
+  margin-left: 3px;
   color: var(--accent-cl);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7124px;
+  letter-spacing: 0.03em;
 }
 
 .btn-accept {
@@ -918,4 +1017,10 @@ img {
   transition-timing-function: var(--timing-function);
   transition-property: color, background-color;
   transition-duration: var(--time);
+}
+
+.btn-accept:hover,
+.btn-accept:focus {
+  color: var(--accent-cl);
+  background-color: var(--white-cl);
 }

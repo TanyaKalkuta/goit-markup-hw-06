@@ -371,8 +371,8 @@
          </address>
          </div>
          <div class="footer-social">
-          <h3 class="details-title">Присоединяйтесь</h3>
-          <ul class="list social-icons">
+            <h3 class="details-title">Присоединяйтесь</h3>
+           <ul class="list social-icons">
             <li class="social-icons-item">
               <a class="social-icons-linkfooter" href="https://instagram.com/" target="_blank" rel="noopener noreferer"
                 aria-label="Instagram">
@@ -405,65 +405,79 @@
                 </svg>
               </a>
             </li>
-          </ul>           
+           </ul>           
          </div>
+
          <div class="footer-mail">
-          <h3 class="details-title">Подпишитесь на рассылку</h3>
-          <div class="email-footer">
-            <div class="form-footer">
-              <!--<label for="mail">Почта</label>-->
-              <input type="email" name="email" placeholder="E-mail">
+            <h3 class="details-title">Подпишитесь на рассылку</h3>
+           <div class="email-footer">
+              <form class="form-footer">
+                <input type="email" name="email" placeholder="E-mail">
+                <button class="btn-email" type="submit">Подписаться
+                  <svg class="btn-icon" width="24" height="24">
+                    <use href="./images/icons/sprite.svg#icon-samoletik"></use>
+                  </svg>
+                </button>
+              </form>
+             
             </div>
-            <button class="btn-email" type="submit">Отправить</button>
-
-
-          </div>
-          
-
-
-         </div>                      
+          </div>                      
         </div>        
       </div> 
       
     </footer>
-
+  <!-- Разметка модального окна -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        
-        <form action="#" class="form js-speaker-form">
-          <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+        <b class="form-title">Оставьте свои данные, мы вам перезвоним</b>
+        <form class="form js-speaker-form">
+          
           <!-- Разметка элементов этой формы -->
           <div class="form-field">
               <label for="name">Имя</label>
-              <input type="text" name="user-name" id="name" placeholder="Введите Имя" />
+              <input class="form-input" type="text" name="user-name" id="name" placeholder=" " />
+              <svg class="form-icon">
+                <use href="./images/icons/sprite.svg#icon-person"></use>
+              </svg>
           </div>
           
           <div class="form-field">
             <label for="tel">Телефон</label>
-            <input type="tel" name="tel" id="tel" placeholder="Введите номер">
+            <input class="form-input" type="tel" name="tel" id="tel" placeholder=" ">
+            <svg class="form-icon">
+              <use href="./images/icons/sprite.svg#icon-phone-black"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label for="mail">Почта</label>
-            <input type="email" name="email" id="mail" placeholder="Введите почту">
+            <input class="form-input" type="email" name="email" id="mail" placeholder=" ">
+            <svg class="form-icon">
+              <use href="./images/icons/sprite.svg#icon-email-black"></use>
+            </svg>
           </div>
 
           <div class="form-field">
             <label for="comment">Комментарий</label>
-            <textarea class="comment" name="comment" id="comment" rows="10" cols="15" placeholder="Введите текст"></textarea>
+            <textarea class="comment form-input" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
           </div>
 
-          <div class="">
-            <input id="accept" name="" type="checkbox" value="" />
-            <label for="accept">Соглашаюсь с рассылкой и принимаю <a class="linkaccept" href="">Условия договора</a></label>
-          </div>
-          
+          <label class="check-label">
+            <input class="check-input" name="accept" type="checkbox" value="" />
+            <span class="check-icon"></span>
+            Соглашаюсь с рассылкой и принимаю<a class="linkaccept" href="">Условия договора</a>
+          </label>
+        
           
           <button class="btn-accept" type="submit">Отправить</button>
        
          
         </form>
-        <button class="btn-close" type="button" data-modal-close></button>
+        <button class="btn-close" type="button" data-modal-close>
+          <svg class="btn-close-c">
+            <use href="./images/icons/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
       </div>
     </div>
 
