@@ -939,8 +939,9 @@ img {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
-  /* color: rgba(117, 117, 117, 0.5);*/
+  color: rgba(117, 117, 117, 0.5);
 }
+
 .check-label {
   position: relative;
   display: flex;
@@ -959,12 +960,16 @@ img {
   color: #757575;
 */
 }
-/*
-.check-label:focus .check-label {
-  text-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+
+.check-input:checked ~ .shadowtext,
+.check-input:checked ~ .linkaccept {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-*/
+
+.check-input:focus ~ .shadowtext,
+.check-input:focus ~ .linkaccept {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 .check-input {
   -webkit-appearance: none;
   -moz-appearance: none;
