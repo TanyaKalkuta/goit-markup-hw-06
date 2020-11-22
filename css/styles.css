@@ -751,11 +751,9 @@ img {
 
 .email-footer {
   display: flex;
-  /*align-items: center;*/
 }
 .form-footer {
   display: flex;
-  /*align-items: center;*/
 }
 .form-footer input {
   width: 358px;
@@ -842,7 +840,7 @@ img {
 }
 .btn-close {
   position: absolute;
-  display: block;
+  display: flex;
   top: 12px;
   right: 8px;
   width: 30px;
@@ -851,19 +849,17 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: center;
+  justify-content: center;
+  align-items: center;
   transition-timing-function: var(--timing-function);
   transition: fill;
   transition-duration: var(--time);
-  /*background-image: url(../images/icons/close.svg);*/
 }
 .btn-close-c {
   width: 11px;
   height: 11px;
-  background-position: center;
-  background-size: contain;
 }
+
 .btn-close:hover,
 .btn-close:focus {
   fill: var(--accent-cl);
@@ -957,13 +953,6 @@ img {
   margin-right: 10px;
   margin-top: 20px;
   padding-left: 23px;
-  /*
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7124px;
-  letter-spacing: 0.03em;
-  color: #757575;
-*/
 }
 .check-input:checked ~ .check-icon,
 .check-input:checked ~ .shadowtext,
