@@ -897,8 +897,8 @@ img {
 }
 .form-field label {
   font-weight: 400;
-  font-size: 1.167;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 1.167;
   letter-spacing: 0.01em;
   color: var(--main-text-cl);
   margin-bottom: 4px;
@@ -920,6 +920,7 @@ img {
 .form-field {
   position: relative;
 }
+.form-input:hover,
 .form-input:focus {
   border-color: var(--accent-cl);
 }
@@ -930,6 +931,7 @@ img {
   left: 12px;
   position: absolute;
 }
+.form-input:hover + .form-icon,
 .form-input:focus + .form-icon {
   fill: var(--accent-cl);
 }
@@ -938,6 +940,10 @@ img {
   width: 448px;
   height: 120px;
   padding: 12px 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.143px;
+  letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
 
@@ -979,12 +985,12 @@ img {
 .check-icon {
   display: block;
   width: 16px;
-  height: 16px;
+  height: 15px;
   position: absolute;
   top: 15%;
   left: 0px;
   border-radius: 2px;
-  border: 3px solid var(--title-cl);
+  border: 2px solid var(--title-cl);
 }
 .check-input:checked + .check-icon {
   background-color: var(--accent-cl);
