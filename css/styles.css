@@ -859,9 +859,6 @@ img {
   display: flex;
   width: 11px;
   height: 11px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .btn-close:hover,
@@ -960,17 +957,22 @@ img {
   margin-top: 20px;
   padding-left: 23px;
 }
-.check-input:checked ~ .check-icon,
+
+/* .check-input:checked ~ .check-icon,
 .check-input:checked ~ .shadowtext,
 .check-input:checked ~ .linkaccept {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+} */
+
+.check-label:focus-within {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
-.check-input:focus ~ .shadowtext,
+/* .check-input:focus ~ .shadowtext,
 .check-input:focus ~ .linkaccept,
 .check-input:focus ~ .check-icon {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+} */
 .check-input {
   -webkit-appearance: none;
   -moz-appearance: none;
